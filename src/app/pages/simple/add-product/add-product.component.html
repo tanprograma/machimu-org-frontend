@@ -35,7 +35,9 @@
   </div>
   @if (products.length>0) {
   <div class="sales-made-container app-shadow">
-    <button class="btn btn-secondary sale-btn">SUBMIT PRODUCTS</button>
+    <button class="btn btn-secondary sale-btn" (click)="submitProducts()">
+      SUBMIT PRODUCTS
+    </button>
     <table class="table table-bordered">
       <thead>
         <tr>

@@ -16,7 +16,7 @@ export class PurchasesStatisticsComponent {
 
   purchases: Signal<PurchaseItem[]> = computed(() => {
     return this.appService
-      .sales()
+      .purchases()
       .reduce((aggregate: PurchaseItem[], current: Purchase) => {
         const mappedItems = current.items.map((i) => {
           return { ...i, date: new Date(current?.date || '') };
